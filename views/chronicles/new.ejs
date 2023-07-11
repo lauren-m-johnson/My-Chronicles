@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+
+<h2>Create a Chronicle</h2>
+<form action="/chronicles" method="POST">
+  <label>Create a Title:
+    <input type="text" name="title">
+  </label><br>
+  <label>Date Created:
+    <input type="date" name="date">
+  </label>
+</form>
+<p><%= errorMsg %></p>
+
+<%- include('../partials/footer') %>
