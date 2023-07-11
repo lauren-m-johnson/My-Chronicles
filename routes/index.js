@@ -12,11 +12,6 @@ router.get('/home', function(req, res) {
   res.render('home');
 });
 
-// //Get Chronicle Library Page
-// router.get('/index', (req, res) => {
-//   res.render('chronicles/index');
-// });
-
 // Google OAuth login route
 router.get('/auth/google', passport.authenticate(
   'google',
@@ -38,7 +33,6 @@ router.get('/oauth2callback', passport.authenticate(
 // OAuth logout route
 router.get('/logout', function(req, res){
   req.logout(function() {
-    //update to new route 
     res.redirect('/');
   });
 });

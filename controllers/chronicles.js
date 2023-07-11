@@ -25,7 +25,7 @@ module.exports = {
 async function create(req, res) {
   try {
     const chronicle = await Chronicle.create(req.body);
-    res.redirect('/chronicles'); // Redirect to the index page
+    res.redirect(`/chronicles/${chronicle._id}`); 
   } catch (err) {
     console.log(err);
     res.render('chronicles/new', { errorMsg: err.message });
