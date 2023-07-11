@@ -12,14 +12,13 @@
     </tr>
   </thead>
   <tbody>
-    <!-- Write the line of EJS to iterate over movies using forEach -->
-      <h1>test</h1>
-    <tr>
-        <td><%= c.title %></td>
-        <td><%= c.date %></td>
-      </tr>
-    <!-- Close the forEach using EJS here -->
+    <% chronicles.forEach(c => { %>
+        <tr>
+            <td><%= c.title %></td>
+            <td><%= c.date %></td>
+        </tr>
+    <% }) %>
   </tbody>
 </table>
 
-<%- include('../partials/header') %>
+<%- include('../partials/footer') %>

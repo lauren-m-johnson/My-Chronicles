@@ -12,6 +12,11 @@ router.get('/home', function(req, res) {
   res.render('home');
 });
 
+// //Get Chronicle Library Page
+// router.get('/index', (req, res) => {
+//   res.render('chronicles/index');
+// });
+
 // Google OAuth login route
 router.get('/auth/google', passport.authenticate(
   'google',

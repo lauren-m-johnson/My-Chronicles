@@ -8,11 +8,10 @@ router.get('/new', chroniclesCtrl.new);
 // POST /chronicles
 router.post('/', chroniclesCtrl.create);
 
+// // GET /index
+router.get('/', chroniclesCtrl.index);
+
 // GET /chronicles/:id
 router.get('/:id', chroniclesCtrl.show);
-
-// WHY ISNT THIS WORKING????
-// // GET /chronicles
-// router.get('/', chroniclesCtrl.index);
 	
 module.exports = router;
