@@ -4,7 +4,8 @@ module.exports = {
     new: newChronicle,
     create,
     index,
-    show
+    show,
+    delete: deleteChronicle
   };
 
   function newChronicle(req, res) {
@@ -43,4 +44,11 @@ async function show(req, res) {
   res.render('chronicles/show', { title: 'Chronicle Logs', chronicle });
 }
 
-
+async function deleteChronicle(req, res) {
+  try {
+    await Chronicle.deleteOne({ _id: req.params.id });
+    res.redirect('/chronicles');
+  } catch (err) {
+    console.log(err);
+  }
+}

@@ -13,5 +13,8 @@ router.get('/', chroniclesCtrl.index);
 
 // GET /chronicles/:id
 router.get('/:id', chroniclesCtrl.show);
+
+// DELETE /chronicles/:id
+router.delete('/:id', chroniclesCtrl.delete);
 	
 module.exports = router;

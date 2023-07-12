@@ -13,6 +13,12 @@
   <tbody>
     <% chronicles.forEach(c => { %>
         <tr>
+            <td>
+                <form action="/chronicles/<%= c.id %>?_method=DELETE"
+                    class="delete-chronicle" method="POST">
+                    <button type="submit">X</button>
+                </form>
+            </td>
             <td><%= c.title %></td>
             <td><%= c.date %></td>
         </tr>

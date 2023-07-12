@@ -18,3 +18,14 @@ a {
 .login img {
   height: 30px;
 }
+
+/* Test for Deleting a Chronicle */
+
+.delete-chronicle {
+  display: inline-block;
+  margin-right: 10px;
+}
+	
+.delete-chronicle button {
+  color: red;
+}
