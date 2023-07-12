@@ -17,8 +17,5 @@ router.get('/:id', chroniclesCtrl.show);
 // DELETE /chronicles/:id
 router.delete('/:id', chroniclesCtrl.delete);
 
-// POST chronicles/:id/entries
-//Route for Creating a Entry for a Chronicle
-
 	
 module.exports = router;

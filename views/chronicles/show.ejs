@@ -11,6 +11,37 @@
     <div><%= chronicle.date %></div>
 </section>
 
+<!-- Displays entries -->
+<% if (chronicle.entries.length) { %>
+    <table>
+        <thead>
+            <tr>
+                <th>Mood</th>
+                <th>Water Intake</th>
+                <th>Exercise</th>
+                <th>Hours of Sleep</th>
+                <th>Axiety Level</th>
+                <th>Entry</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% chronicle.entries.forEach(function(e) { %>
+                <tr>
+                    <td><%= e.createdAt.toLocaleDateString() %></td>
+                    <td><%= e.mood %></td>
+                    <td><%= e.water %></td>
+                    <td><%= e.exercise %></td> 
+                    <td><%= e.sleep %></td> 
+                    <td><%= e.anxiety %></td>
+                    <td><%= e.journal %></td>          
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <% } else { %>
+        <h5>No Entires Yet</h5>
+    <% } %>
+
 <!-- Displays the form to create a new entry in a Chronicle-->
 <!-- Make this render with a button-->
 <section id="show-entries-form">
@@ -66,7 +97,7 @@
     <option value="1">1 - No Anxiety</option>
   </select>
   
-  <label>Entry:</label>
+  <label>Daily Writing Prompt:</label>
   <textarea name="journal"></textarea>
 
   <input type="submit" value="Add Entry">
