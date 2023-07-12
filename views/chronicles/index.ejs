@@ -1,13 +1,13 @@
 <!-- DISPLAYS ALL CHRONICLES-->
-
 <%- include('../partials/header') %>
 
 <h2>Your Chronicles</h2>
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Date</th>
+      <th></th>
+      <th>Chronicle Title</th>
+      <th>Date Created</th>
     </tr>
   </thead>
   <tbody>
@@ -20,7 +20,7 @@
                 </form>
             </td>
             <td><%= c.title %></td>
-            <td><%= c.date %></td>
+            <td><%= c.date.toDateString() %></td>
         </tr>
     <% }) %>
   </tbody>
