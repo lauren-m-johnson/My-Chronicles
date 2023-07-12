@@ -13,19 +13,10 @@ function deleteOne(id) {
     chronicles.splice(idx, 1);
 }
 
-const chronicleSchema = new Schema({
-    title: {
-        type: String,
-        required: true
-    },
-    date: Date,
-    entries: [entrySchema]
-});
-
 const entrySchema = new Schema({
     mood: {
         type: String,
-        enum: ['Happy', 'Sad', 'Excited', 'Content', 'Angry', 'Content', 'Nervous', 'Calm', 'Overwhelmed', 'Other'],
+        enum: ['Happy', 'Sad', 'Excited', 'Content', 'Angry', 'Nervous', 'Calm', 'Overwhelmed', 'Other'],
         required: true
     },
     water: {
@@ -35,7 +26,7 @@ const entrySchema = new Schema({
     },
     exercise: {
         type: String,
-        enum: ['none', '30 min', '60 min', '90 min', '120 min+'],
+        enum: ['none', '30', '60', '90', '120+'],
         required: true
     },
     sleep: {
@@ -45,7 +36,7 @@ const entrySchema = new Schema({
     },
     anxiety: {
         type: String,
-        enum: ['5 - Extremely Anxious', '4 - Very Anxious', '3 - Anxious', '2 - Very Little Anxious', '1 - No Anxiety'],
+        enum: ['5', '4', '3', '2', '1'],
         required: true
     },
     journal: {
@@ -55,5 +46,15 @@ const entrySchema = new Schema({
 }, {
     timestamps: true
 })
+
+const chronicleSchema = new Schema({
+    title: {
+        type: String,
+        required: true
+    },
+    date: Date,
+    entries: [entrySchema]
+});
+
 
 module.exports = mongoose.model('Chronicle', chronicleSchema);
