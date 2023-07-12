@@ -21,9 +21,12 @@
             </td>
             <td><%= c.title %></td>
             <td><%= c.date.toDateString() %></td>
+            <td><a href="/chronicles/<%= c._id %>">Chronicle</a></td>
         </tr>
     <% }) %>
   </tbody>
 </table>
+
+<a href="/chronicles/new">Create a Chronicle</a>
 
 <%- include('../partials/footer') %>
