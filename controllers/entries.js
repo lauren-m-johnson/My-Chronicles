@@ -11,17 +11,16 @@ module.exports = {
 async function update(req, res) {
   try {
     const chronicle = await Chronicle.findOne({ 'entries._id': req.params.id });
-    const entrySubdoc = chronicle.entries.id(req.params.id); 
-    if (!entrySubdoc || !entrySubdoc.userId || !entrySubdoc.userId.equals(req.user._id)) {
-      return res.redirect(`/chronicles/${chronicle._id}`);
-    }
-    entrySubdoc.mood = req.body.mood; 
-    entrySubdoc.water = req.body.water; 
-    entrySubdoc.exercise = req.body.exercise; 
-    entrySubdoc.sleep = req.body.sleep; 
-    entrySubdoc.anxiety = req.body.anxiety; 
-    entrySubdoc.journal = req.body.journal; 
+    const entrySubdoc = chronicle.entries.id(req.params.id);
+    if (!chronicle) return res.redirect('/chronicles');
+    entrySubdoc.mood = req.body.mood;
+    entrySubdoc.water = req.body.water;
+    entrySubdoc.exercise = req.body.exercise;
+    entrySubdoc.sleep = req.body.sleep;
+    entrySubdoc.anxiety = req.body.anxiety;
+    entrySubdoc.journal = req.body.journal;
     await chronicle.save();
+    const updatedEntry = chronicle.entries.id(req.params.id);
     res.redirect(`/chronicles/${chronicle._id}`);
   } catch (err) {
     console.log(err);

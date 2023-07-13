@@ -4,7 +4,6 @@
 <section id="edit-entries-form">
     <br><br><h2>Edit Entry</h2>
     <form method="POST" action="/entries/<%= entry._id %>?_method=PUT">
-
   <label>My Mood:</label>
   <select name="mood">
     <option value="Happy" <%= selectedValues.mood === 'Happy' ? 'selected' : '' %>>Happy</option>
