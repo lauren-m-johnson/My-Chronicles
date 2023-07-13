@@ -1,21 +1,22 @@
 const express = require('express');
 const router = express.Router();
 const chroniclesCtrl = require('../controllers/chronicles');
+const ensureLoggedIn = require('../config/ensureLoggedIn');
 	
 // GET /chronicles/new
-router.get('/new', chroniclesCtrl.new);
+router.get('/new', ensureLoggedIn, chroniclesCtrl.new);
 
 // POST /chronicles
-router.post('/', chroniclesCtrl.create);
+router.post('/', ensureLoggedIn, chroniclesCtrl.create);
 
 // // GET /index
 router.get('/', chroniclesCtrl.index);
 
 // GET /chronicles/:id
-router.get('/:id', chroniclesCtrl.show);
+router.get('/:id', ensureLoggedIn, chroniclesCtrl.show);
 
 // DELETE /chronicles/:id
-router.delete('/:id', chroniclesCtrl.delete);
+router.delete('/:id', ensureLoggedIn, chroniclesCtrl.delete);
 
 	
 module.exports = router;

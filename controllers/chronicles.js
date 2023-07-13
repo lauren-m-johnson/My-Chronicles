@@ -12,18 +12,10 @@ module.exports = {
     res.render('chronicles/new', { errorMsg: '' });
   }
 
-
-// async function create(req, res) {
-//   try {
-//     const chronicle = await Chronicle.create(req.body);
-//     res.redirect(`/chronicles/${chronicle._id}`);
-//   } catch (err) {
-//     console.log(err);
-//     res.render('chronicles/new', { errorMsg: err.message });
-//   }
-// }
-
 async function create(req, res) {
+  req.body.user = req.user._id;
+  req.body.userName = req.user.name;
+  req.body.userAvatar = req.user.avatar;
   try {
     const chronicle = await Chronicle.create(req.body);
     res.redirect(`/chronicles/${chronicle._id}`); 
@@ -35,7 +27,6 @@ async function create(req, res) {
 
 async function index(req, res) {
   const allChronicles = await Chronicle.find({})
-  console.log(allChronicles)
   res.render('chronicles/index', { chronicles: allChronicles })
 }
 

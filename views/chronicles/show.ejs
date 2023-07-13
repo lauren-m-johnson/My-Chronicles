@@ -16,6 +16,7 @@
     <table>
         <thead>
             <tr>
+                <th>Date</th>
                 <th>Mood</th>
                 <th>Water Intake</th>
                 <th>Exercise</th>
@@ -33,7 +34,12 @@
                     <td><%= e.exercise %></td> 
                     <td><%= e.sleep %></td> 
                     <td><%= e.anxiety %></td>
-                    <td><%= e.journal %></td>          
+                    <td><%= e.journal %></td>
+                    <td>
+                        <form action="/entries/<%= e.id %>?_method=DELETE" method="POST">
+                            <button type="submit">X</button>
+                        </form>
+                    </td>   
                 </tr>
             <% }); %>
         </tbody>

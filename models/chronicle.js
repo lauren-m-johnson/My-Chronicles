@@ -53,7 +53,14 @@ const chronicleSchema = new Schema({
         required: true
     },
     date: Date,
-    entries: [entrySchema]
+    entries: [entrySchema],
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    },
+    userName: String,
+    userAvatar: String
 });
 
 
