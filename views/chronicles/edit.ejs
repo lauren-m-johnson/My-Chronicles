@@ -1,0 +1,65 @@
+<!-- Form for editing an Entry in a Chronicle-->
+<%- include('../partials/header') %>
+
+<section id="edit-entries-form">
+    <br><br><h2>Edit Entry</h2>
+<form method="POST"
+  action="/entries/<%= entry._id %>?_method=PUT">
+
+  <label>My Mood:</label>
+  <select name="mood">
+    <option value="Happy">Happy</option>
+    <option value="Sad">Sad</option>
+    <option value="Excited">Excited</option>
+    <option value="Content">Content</option>
+    <option value="Angry">Angry</option>
+    <option value="Nervous">Nervous</option>
+    <option value="Calm">Calm</option>
+    <option value="Overwhelmed">Overwhelmed</option>
+    <option value="Other">Other</option>
+  </select>
+
+  <label>Water Intake:</label>
+  <select name="water">
+    <option value="0-1">0-1 8oz glasses</option>
+    <option value="2-3">2-3 8oz glasses</option>
+    <option value="4-5">4-5 8oz glasses</option>
+    <option value="6-7">6-7 8oz glasses</option>
+    <option value="8+">8+ 8oz glasses</option>
+  </select>
+
+  <label>Daily Exercise:</label>
+  <select name="exercise">
+    <option value="none">None</option>
+    <option value="30">30 Min</option>
+    <option value="60">60 Min</option>
+    <option value="90">90 Min</option>
+    <option value="120+">120+ Min</option>
+  </select>
+
+  <label>Hours of Sleep:</label>
+  <select name="sleep">
+    <option value="0-3">0-3 Hours</option>
+    <option value="3-6">3-6 Hours</option>
+    <option value="6-8">6-8 Hours</option>
+    <option value="8+">8+ Hours</option>
+  </select>
+
+  <label>Anxiety Level:</label>
+  <select name="anxiety">
+    <option value="5">5 - Extremely Anxious</option>
+    <option value="4">4 - Very Anxious</option>
+    <option value="3">3 - Anxious</option>
+    <option value="2">2 - Very Little Anxious</option>
+    <option value="1">1 - No Anxiety</option>
+  </select>
+  
+  <label>Daily Writing Prompt:</label>
+  <textarea name="journal"></textarea>
+
+  <input type="submit" value="Update Entry">
+
+</form>
+</section>
+
+<%- include('../partials/footer') %>

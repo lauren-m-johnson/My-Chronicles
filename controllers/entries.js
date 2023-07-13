@@ -2,8 +2,38 @@ const Chronicle = require('../models/chronicle');
 
 module.exports = {
   create,
-  delete: deleteEntry
+  delete: deleteEntry,
+  edit,
+  update
 };
+
+
+async function update(req, res) {
+  try {
+    const chronicle = await Chronicle.findOne({ 'entries._id': req.params.id });
+    const entrySubdoc = chronicle.entries.id(req.params.id); 
+    if (!entrySubdoc || !entrySubdoc.userId || !entrySubdoc.userId.equals(req.user._id)) {
+      return res.redirect(`/chronicles/${chronicle._id}`);
+    }
+    entrySubdoc.text = req.body.text;
+    await chronicle.save();
+    res.redirect(`/chronicles/${chronicle._id}`);
+  } catch (err) {
+    console.log(err);
+    // Handle any errors
+  }
+}
+
+async function edit(req, res) {
+  try {
+    const chronicle = await Chronicle.findOne({ 'entries._id': req.params.id });
+    const entry = chronicle.entries.id(req.params.id);
+    res.render('chronicles/edit', { entry }); 
+  } catch (err) {
+    console.log(err);
+  }
+}
+
 
 async function deleteEntry(req, res) {
     const chronicle = await Chronicle.findOne({ 'entries._id': req.params.id });

@@ -1,5 +1,4 @@
-<!-- SHOW CHRONICLES PAGE -->
-<!-- This page shows the chronicle after being created-->
+<!-- This page shows the chronicle after being created and all of that Chronicle's Entries-->
 
 <%- include('../partials/header') %>
 
@@ -39,7 +38,12 @@
                         <form action="/entries/<%= e.id %>?_method=DELETE" method="POST">
                             <button type="submit">X</button>
                         </form>
-                    </td>   
+                    </td>
+                    <td>
+                      <form action="/chronicles/<%= chronicle._id %>/entries/<%= e._id %>/edit" method="GET">
+                        <button type="submit">Edit</button>
+                      </form>
+                  </td>
                 </tr>
             <% }); %>
         </tbody>
@@ -51,7 +55,7 @@
 <!-- Displays the form to create a new entry in a Chronicle-->
 <!-- Make this render with a button-->
 <section id="show-entries-form">
-    <br><br><h2>Chronicle Entries</h2>
+    <br><br><h2>New Entry</h2>
 <form method="POST"
   action="/chronicles/<%= chronicle._id %>/entries">
 

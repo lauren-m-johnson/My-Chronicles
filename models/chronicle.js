@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-// const { ObjectId } = require('mongoose');
 const chronicles = require('../controllers/chronicles');
 const Schema = mongoose.Schema;
 
