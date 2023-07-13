@@ -3,59 +3,58 @@
 
 <section id="edit-entries-form">
     <br><br><h2>Edit Entry</h2>
-<form method="POST"
-  action="/entries/<%= entry._id %>?_method=PUT">
+    <form method="POST" action="/entries/<%= entry._id %>?_method=PUT">
 
   <label>My Mood:</label>
   <select name="mood">
-    <option value="Happy">Happy</option>
-    <option value="Sad">Sad</option>
-    <option value="Excited">Excited</option>
-    <option value="Content">Content</option>
-    <option value="Angry">Angry</option>
-    <option value="Nervous">Nervous</option>
-    <option value="Calm">Calm</option>
-    <option value="Overwhelmed">Overwhelmed</option>
-    <option value="Other">Other</option>
+    <option value="Happy" <%= selectedValues.mood === 'Happy' ? 'selected' : '' %>>Happy</option>
+    <option value="Sad" <%= selectedValues.mood === 'Sad' ? 'selected' : '' %>>Sad</option>
+    <option value="Excited" <%= selectedValues.mood === 'Excited' ? 'selected' : '' %>>Excited</option>
+    <option value="Content" <%= selectedValues.mood === 'Content' ? 'selected' : '' %>>Content</option>
+    <option value="Angry" <%= selectedValues.mood === 'Angry' ? 'selected' : '' %>>Angry</option>
+    <option value="Nervous" <%= selectedValues.mood === 'Nervous' ? 'selected' : '' %>>Nervous</option>
+    <option value="Calm" <%= selectedValues.mood === 'Calm' ? 'selected' : '' %>>Calm</option>
+    <option value="Overwhelmed" <%= selectedValues.mood === 'Overwhelmed' ? 'selected' : '' %>>Overwhelmed</option>
+    <option value="Other" <%= selectedValues.mood === 'Other' ? 'selected' : '' %>>Other</option>
   </select>
 
   <label>Water Intake:</label>
   <select name="water">
-    <option value="0-1">0-1 8oz glasses</option>
-    <option value="2-3">2-3 8oz glasses</option>
-    <option value="4-5">4-5 8oz glasses</option>
-    <option value="6-7">6-7 8oz glasses</option>
-    <option value="8+">8+ 8oz glasses</option>
+    <option value="0-1" <%= selectedValues.water === '0-1' ? 'selected' : '' %>>0-1 8oz glasses</option>
+    <option value="2-3" <%= selectedValues.water === '2-3' ? 'selected' : '' %>>2-3 8oz glasses</option>
+    <option value="4-5" <%= selectedValues.water === '4-5' ? 'selected' : '' %>>4-5 8oz glasses</option>
+    <option value="6-7" <%= selectedValues.water === '6-7' ? 'selected' : '' %>>6-7 8oz glasses</option>
+    <option value="8+" <%= selectedValues.water === '8+' ? 'selected' : '' %>>8+ 8oz glasses</option>
   </select>
 
   <label>Daily Exercise:</label>
   <select name="exercise">
-    <option value="none">None</option>
-    <option value="30">30 Min</option>
-    <option value="60">60 Min</option>
-    <option value="90">90 Min</option>
-    <option value="120+">120+ Min</option>
+    <option value="none" <%= selectedValues.exercise === 'none' ? 'selected' : '' %>>None</option>
+    <option value="30" <%= selectedValues.exercise === '30' ? 'selected' : '' %>>30 Min</option>
+    <option value="60" <%= selectedValues.exercise === '60' ? 'selected' : '' %>>60 Min</option>
+    <option value="90" <%= selectedValues.exercise === '90' ? 'selected' : '' %>>90 Min</option>
+    <option value="120+" <%= selectedValues.exercise === '120+' ? 'selected' : '' %>>120+ Min</option>
   </select>
 
   <label>Hours of Sleep:</label>
   <select name="sleep">
-    <option value="0-3">0-3 Hours</option>
-    <option value="3-6">3-6 Hours</option>
-    <option value="6-8">6-8 Hours</option>
-    <option value="8+">8+ Hours</option>
+    <option value="0-3" <%= selectedValues.sleep === '0-3' ? 'selected' : '' %>>0-3 Hours</option>
+    <option value="3-6" <%= selectedValues.sleep === '3-6' ? 'selected' : '' %>>3-6 Hours</option>
+    <option value="6-8" <%= selectedValues.sleep === '6-8' ? 'selected' : '' %>>6-8 Hours</option>
+    <option value="8+" <%= selectedValues.sleep === '8+' ? 'selected' : '' %>>8+ Hours</option>
   </select>
 
   <label>Anxiety Level:</label>
   <select name="anxiety">
-    <option value="5">5 - Extremely Anxious</option>
-    <option value="4">4 - Very Anxious</option>
-    <option value="3">3 - Anxious</option>
-    <option value="2">2 - Very Little Anxious</option>
-    <option value="1">1 - No Anxiety</option>
+    <option value="5" <%= selectedValues.anxiety === '5' ? 'selected' : '' %>>5 - Extremely Anxious</option>
+    <option value="4" <%= selectedValues.anxiety === '4' ? 'selected' : '' %>>4 - Very Anxious</option>
+    <option value="3" <%= selectedValues.anxiety === '3' ? 'selected' : '' %>>3 - Anxious</option>
+    <option value="2" <%= selectedValues.anxiety === '2' ? 'selected' : '' %>>2 - Very Little Anxious</option>
+    <option value="1" <%= selectedValues.anxiety === '1' ? 'selected' : '' %>>1 - No Anxiety</option>
   </select>
   
   <label>Daily Writing Prompt:</label>
-  <textarea name="journal"></textarea>
+  <textarea name="journal"><%= selectedValues.journal %></textarea>
 
   <input type="submit" value="Update Entry">
 
