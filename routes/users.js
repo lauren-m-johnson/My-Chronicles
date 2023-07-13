@@ -7,11 +7,12 @@ router.get('/', function(req, res, next) {
 });
 
 // GET User's name and Avatar and passes it to the homepage
-// router.get('/home', function(req, res) {
-//   const userName = req.user.name;
-//   const userAvatar = req.user.avatar;
+router.get('/', (req, res) => {
+  res.render('home', { user: req.user });
+});
 
-//   res.render('home', { userName, userAvatar });
-// });
+router.get('/', (req, res) => {
+  res.render('/header', { user: req.user });
+});
 
 module.exports = router;

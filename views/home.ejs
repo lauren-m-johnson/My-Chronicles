@@ -2,9 +2,12 @@
 <!-- FIX THIS PAGE USERNAME AND USERAVATAR ARE NOT WORKING -->
   <%- include('./partials/header') %>
 
-    <h1>Welcome!</h1>
-    <img>
-    <!-- Add Welcome <username>! and avatar-->
+    <h1>Welcome <%= user.name %>!</h1>
+    <h2>"<%= quote %>"</h2>
+    <form action="/chronicles" method="GET">
+      <button type="submit">Continue a Chronicle</button>
+    </form>
+    <p>-OR-</p>
     <form action="/chronicles/new" method="GET">
       <button type="submit">Create a Chronicle</button>
     </form>
