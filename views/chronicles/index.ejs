@@ -14,15 +14,16 @@
     <tbody>
       <% chronicles.forEach(c => { %>
          <tr>
-              <td>
-                  <form action="/chronicles/<%= c.id %>?_method=DELETE"
-                    class="delete-chronicle" method="POST">
-                      <button type="submit">X</button>
-                  </form>
-              </td>
-              <td><%= c.title %></td>
-              <td><%= c.date.toDateString() %></td>
-              <td><a href="/chronicles/<%= c._id %>">View</a></td>
+            <td><img id="book" src="/images/chronicle.png"></td>
+            <td><%= c.title %></td>
+            <td><%= c.date.toDateString() %></td>
+            <td><a href="/chronicles/<%= c._id %>">View</a></td>
+            <td>
+              <form action="/chronicles/<%= c.id %>?_method=DELETE"
+                 class="delete-chronicle" method="POST">
+                 <button type="submit">X</button>
+               </form>
+             </td>
           </tr>
       <% }) %>
     </tbody>

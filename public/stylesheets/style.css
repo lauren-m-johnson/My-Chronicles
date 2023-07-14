@@ -160,6 +160,11 @@ h2 {
   height: 10vmin;
   width: 60vmin;
 }
+
+#book {
+  height: 10vmin;
+}
+
 button:hover {
   background-color: #D93425;
 }
