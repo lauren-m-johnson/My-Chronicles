@@ -37,6 +37,7 @@ button {
   padding: 5px 20px;
   color: #F4CF88;
   font-size: 3vmin;
+  border: none;
 }
 
 #avatar {
@@ -75,13 +76,14 @@ button {
   gap: 3vmin;
 }
 
-/* Test for Deleting a Chronicle */
-
-.delete-chronicle {
-  display: inline-block;
-  margin-right: 10px;
+#login-image {
+  height: 4vmin;
 }
-	
-.delete-chronicle button {
-  color: red;
+
+button:hover {
+  background-color: #D93425;
+}
+
+a:hover {
+  color: #D93425;  
 }
