@@ -27,11 +27,15 @@ async function create(req, res) {
 }
 
 async function index(req, res) {
-  const allChronicles = await Chronicle.find({})
-  res.render('chronicles/index', { chronicles: allChronicles })
+  const loggedInUserId = req.user.id;
+  const userChronicles = await Chronicle.find({ user: loggedInUserId})
+  res.render('chronicles/index', { chronicles: userChronicles })
 }
 
 async function show(req, res) {
+  req.body.user = req.user._id;
+  req.body.userName = req.user.name;
+  req.body.userAvatar = req.user.avatar;
   const chronicle = await Chronicle.findById(req.params.id);
   const randomPrompt = prompts.getRandomPrompt();
   res.render('chronicles/show', { title: 'Chronicle Logs', chronicle, randomPrompt });
