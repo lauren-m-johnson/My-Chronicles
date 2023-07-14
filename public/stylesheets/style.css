@@ -1,7 +1,7 @@
 body {
   height: 100vh;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #000000;
+  background-image: url('https://wallpapercave.com/wp/wp4468225.jpg');
+  background-size: 100% auto;
   color: #F4CF88;
   font-family: 'Noto Serif', serif;
 }
@@ -102,9 +102,11 @@ h2 {
 
 }
 
-#chronicle-display h2 {
+#show-page-header h1 {
   font-family: 'Caprasimo', cursive;
+  font-size: 4vmin;
 }
+
 #chronicle-display a {
   background-color: #D971B4;
   padding: 5px 20px;
@@ -121,8 +123,43 @@ h2 {
   justify-content: center;
   align-items: flex-start;
   margin-left: 10px;
+  font-size: 3vmin;
 }
 
+#entry-table table {
+  background-color: #8552F2;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#entry-table th {
+  font-family: 'Noto Serif', serif;
+}
+
+#show-entries-form {
+  margin: 5vmin;
+  background-color: #D971B4;
+  border-radius: 10px;
+  padding: 0 3vmin 3vmin 3vmin;
+  font-size: 2vmin;
+}
+
+#show-entries-form h2 {
+  font-family: 'Caprasimo', cursive;
+}
+
+#show-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5vmin;
+}
+
+#text-box {
+  height: 10vmin;
+  width: 60vmin;
+}
 button:hover {
   background-color: #D93425;
 }
