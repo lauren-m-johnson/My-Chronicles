@@ -1,4 +1,5 @@
 const Chronicle = require('../models/chronicle');
+const prompts = require('./prompts');
 
 module.exports = {
     new: newChronicle,
@@ -32,7 +33,8 @@ async function index(req, res) {
 
 async function show(req, res) {
   const chronicle = await Chronicle.findById(req.params.id);
-  res.render('chronicles/show', { title: 'Chronicle Logs', chronicle });
+  const randomPrompt = prompts.getRandomPrompt();
+  res.render('chronicles/show', { title: 'Chronicle Logs', chronicle, randomPrompt });
 }
 
 async function deleteChronicle(req, res) {

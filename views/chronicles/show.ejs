@@ -4,10 +4,9 @@
 
 <!-- Displays the Chronicle that was created-->
 <section id="show-page">
-    <h1>Chronicle Created</h1>
-    <div>Chronicle Image</div>
+    <h1>Chronicle Entries</h1>
     <div><%= chronicle.title %></div>
-    <div><%= chronicle.date %></div>
+    <div><%= chronicle.date.toLocaleDateString() %></div>
 </section>
 
 <!-- Displays entries -->
@@ -108,6 +107,7 @@
   </select>
   
   <label>Daily Writing Prompt:</label>
+  <p><%= randomPrompt %></p>
   <textarea name="journal"></textarea>
 
   <input type="submit" value="Add Entry">
