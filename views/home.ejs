@@ -1,9 +1,9 @@
 <!-- Home Page -->
 <!-- FIX THIS PAGE USERNAME AND USERAVATAR ARE NOT WORKING -->
   <%- include('./partials/header') %>
-
+  <div id="home-page">
     <h1>Welcome <%= user.name %>!</h1>
-    <h2>"<%= quote %>"</h2>
+    <h2><em>"<%= quote %>"</em></h2>
     <form action="/chronicles" method="GET">
       <button type="submit">Continue a Chronicle</button>
     </form>
@@ -11,5 +11,5 @@
     <form action="/chronicles/new" method="GET">
       <button type="submit">Create a Chronicle</button>
     </form>
-
+  </div>
   <%- include('./partials/footer') %>
