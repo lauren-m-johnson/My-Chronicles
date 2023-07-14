@@ -8,6 +8,8 @@ body {
 
 a {
   font-family: 'Caprasimo', cursive;
+  color: #F4CF88;
+  text-decoration: none;
 }
 
 nav {
@@ -19,15 +21,10 @@ nav {
   background-color: #9D62D9;
   width: 100%;
   height: 5vmin;
-  padding: 0 20px 0 20px;
-  margin: 10px 10px;
+  padding-right: 10px;
+  margin-right: 10px;
   color: #F4CF88;
   font-size: 2.5vmin;
-}
-
-nav, a {
-  color: #F4CF88;
-  text-decoration: none;
 }
 
 button {
@@ -38,6 +35,23 @@ button {
   color: #F4CF88;
   font-size: 3vmin;
   border: none;
+}
+
+table {
+  border-spacing: 15px;
+}
+
+table th {
+  font-size: 3vmin;
+  font-family: 'Caprasimo', cursive;
+}
+
+table td {
+  font-size: 2vmin;
+}
+
+h2 {
+  font-size: 4vmin;
 }
 
 #avatar {
@@ -78,6 +92,35 @@ button {
 
 #login-image {
   height: 4vmin;
+}
+
+#chronicle-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#chronicle-display h2 {
+  font-family: 'Caprasimo', cursive;
+}
+#chronicle-display a {
+  background-color: #D971B4;
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+
+#create-chronicle {
+  font-size: 3vmin;
+}
+
+#show-page-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 10px;
 }
 
 button:hover {

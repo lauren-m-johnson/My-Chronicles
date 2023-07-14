@@ -1,32 +1,34 @@
 <!-- DISPLAYS ALL CHRONICLES-->
 <%- include('../partials/header') %>
-
-<h2><%= user.name %>'s Chronicles</h2>
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th>Chronicle Title</th>
-      <th>Date Created</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% chronicles.forEach(c => { %>
-        <tr>
-            <td>
-                <form action="/chronicles/<%= c.id %>?_method=DELETE"
+<div id="chronicle-display">
+  <h2><%= user.name %>'s Chronicles</h2>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Title</th>
+        <th>Date Created</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% chronicles.forEach(c => { %>
+         <tr>
+              <td>
+                  <form action="/chronicles/<%= c.id %>?_method=DELETE"
                     class="delete-chronicle" method="POST">
-                    <button type="submit">X</button>
-                </form>
-            </td>
-            <td><%= c.title %></td>
-            <td><%= c.date.toDateString() %></td>
-            <td><a href="/chronicles/<%= c._id %>">Chronicle</a></td>
-        </tr>
-    <% }) %>
-  </tbody>
-</table>
-
-<a href="/chronicles/new">Create a Chronicle</a>
+                      <button type="submit">X</button>
+                  </form>
+              </td>
+              <td><%= c.title %></td>
+              <td><%= c.date.toDateString() %></td>
+              <td><a href="/chronicles/<%= c._id %>">View</a></td>
+          </tr>
+      <% }) %>
+    </tbody>
+  </table>
+  <br>
+  <a id="create-chronicle" href="/chronicles/new">Create a Chronicle</a>
+</div>
 
 <%- include('../partials/footer') %>

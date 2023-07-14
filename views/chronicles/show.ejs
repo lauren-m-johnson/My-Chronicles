@@ -3,13 +3,14 @@
 <%- include('../partials/header') %>
 
 <!-- Displays the Chronicle that was created-->
-<section id="show-page">
+<section id="show-page-header">
     <h1>Chronicle Entries</h1>
     <div><%= chronicle.title %></div>
     <div><%= chronicle.date.toLocaleDateString() %></div>
 </section>
 
 <!-- Displays entries -->
+<section id="entry-table">
 <% if (chronicle.entries.length) { %>
     <table>
         <thead>
@@ -50,6 +51,7 @@
     <% } else { %>
         <h5>No Entires Yet</h5>
     <% } %>
+  </section>
 
 <!-- Displays the form to create a new entry in a Chronicle-->
 <!-- Make this render with a button-->
