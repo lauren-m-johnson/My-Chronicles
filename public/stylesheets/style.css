@@ -4,6 +4,7 @@ body {
   background-size: 100% auto;
   color: #F4CF88;
   font-family: 'Noto Serif', serif;
+  font-size: 2.5vmin;
 }
 
 a {
@@ -48,6 +49,10 @@ table th {
 
 table td {
   font-size: 2vmin;
+}
+
+h1 {
+  color: #8552F2;
 }
 
 h2 {
@@ -102,15 +107,14 @@ h2 {
 
 }
 
-#show-page-header h1 {
-  font-family: 'Caprasimo', cursive;
-  font-size: 4vmin;
-}
-
 #chronicle-display a {
   background-color: #D971B4;
   padding: 5px 20px;
   border-radius: 10px;
+}
+
+#chronicle-display th {
+  color: #8552F2;
 }
 
 #create-chronicle {
@@ -124,6 +128,18 @@ h2 {
   align-items: flex-start;
   margin-left: 10px;
   font-size: 3vmin;
+}
+
+#show-page-header h1 {
+  font-family: 'Caprasimo', cursive;
+  font-size: 4vmin;
+}
+
+#show-page-header div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #entry-table table {
@@ -163,6 +179,44 @@ h2 {
 
 #book {
   height: 10vmin;
+}
+
+#create-chronicle {
+  background-color: #8552F2;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5vmin;
+}
+
+#create-chronicle input[type="submit"] {
+  font-family: 'Caprasimo', cursive;
+  background-color: #D971B4;
+  border-radius: 10px;
+  padding: 5px 20px;
+  color: #F4CF88;
+  font-size: 2.5vmin;
+  border: none;
+}
+
+#create-chronicle input[type="text"] {
+  font-family: 'Caprasimo', cursive;
+  border-radius: 10px;
+  padding: 5px 20px;
+  color: #D971B4;
+  font-size: 2.5vmin;
+  border: none;
+}
+
+#create-chronicle input[type="date"] {
+  font-family: 'Caprasimo', cursive;
+  border-radius: 10px;
+  padding: 5px 20px;
+  color: #D971B4;
+  font-size: 2.5vmin;
+  border: none;
 }
 
 button:hover {

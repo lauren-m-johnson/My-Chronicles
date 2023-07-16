@@ -4,9 +4,14 @@
 
 <!-- Displays the Chronicle that was created-->
 <section id="show-page-header">
-    <h1>Chronicle Entries</h1>
-    <div><%= chronicle.title %></div>
-    <div><%= chronicle.date.toLocaleDateString() %></div>
+  <h1>Chronicle Entries</h1>
+  <div>
+    <img id="book" src="/images/chronicle.png">
+    ||
+    <%= chronicle.title %>
+    ||
+    <%= chronicle.date.toLocaleDateString() %>
+  </div>
 </section>
 
 <!-- Displays entries -->

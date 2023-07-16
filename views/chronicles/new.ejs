@@ -1,7 +1,7 @@
 <!-- New Chronicle Form Page -->
 
 <%- include('../partials/header') %>
-
+<div id="create-chronicle">
 <h2>Create a Chronicle</h2>
 <form action="/chronicles" method="POST">
   <label>Create a Title:
@@ -13,5 +13,5 @@
   <input type="submit" value="Create Chronicle">
 </form>
 <p><%= errorMsg %></p>
-
+</div>
 <%- include('../partials/footer') %>
