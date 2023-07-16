@@ -8,118 +8,122 @@
   <div>
     <img id="book" src="/images/chronicle.png">
     ||
-    <%= chronicle.title %>
+    <div><%= chronicle.title %></div>
     ||
-    <%= chronicle.date.toLocaleDateString() %>
+    <div><%= chronicle.date.toLocaleDateString() %></div>
   </div>
 </section>
 
 <!-- Displays entries -->
 <div id="show-content">
   <section id="entry-table">
-  <% if (chronicle.entries.length) { %>
-    <table>
+    <% if (chronicle.entries.length) { %>
+      <table>
         <thead>
-            <tr>
-                <th>Date</th>
-                <th>Mood</th>
-                <th>Water</th>
-                <th>Exercise</th>
-                <th>Sleep</th>
-                <th>Axiety</th>
-                <th>Reflection Entry</th>
-            </tr>
+          <tr>
+            <th>Date</th>
+            <th>Mood</th>
+            <th>Water</th>
+            <th>Exercise</th>
+            <th>Sleep</th>
+            <th>Axiety</th>
+            <th>Reflection Entry</th>
+          </tr>
         </thead>
         <tbody>
-            <% chronicle.entries.forEach(function(e) { %>
-                <tr>
-                    <td><%= e.createdAt.toLocaleDateString() %></td>
-                    <td><%= e.mood %></td>
-                    <td><%= e.water %></td>
-                    <td><%= e.exercise %></td> 
-                    <td><%= e.sleep %></td> 
-                    <td><%= e.anxiety %></td>
-                    <td><%= e.journal %></td>
-                    <td>
-                        <form action="/entries/<%= e.id %>?_method=DELETE" method="POST">
-                            <button type="submit">X</button>
-                        </form>
-                    </td>
-                    <td>
-                      <form action="/chronicles/<%= chronicle._id %>/entries/<%= e._id %>/edit" method="GET">
-                        <button type="submit">Edit</button>
-                      </form>
-                  </td>
-                </tr>
-            <% }); %>
+          <% chronicle.entries.forEach(function(e) { %>
+            <tr>
+              <td><%= e.createdAt.toLocaleDateString() %></td>
+              <td><%= e.mood %></td>
+              <td><%= e.water %></td>
+              <td><%= e.exercise %></td>
+              <td><%= e.sleep %></td>
+              <td><%= e.anxiety %></td>
+              <td><%= e.journal %></td>
+              <td>
+                <form action="/entries/<%= e.id %>?_method=DELETE" method="POST">
+                  <button type="submit">X</button>
+                </form>
+              </td>
+              <td>
+                <form action="/chronicles/<%= chronicle._id %>/entries/<%= e._id %>/edit" method="GET">
+                  <button type="submit">Edit</button>
+                </form>
+              </td>
+            </tr>
+          <% }); %>
         </tbody>
-    </table>
+      </table>
     <% } else { %>
-        <h5>No Entires Yet</h5>
+      <h5>No Entries Yet</h5>
     <% } %>
   </section>
+</div>
 
 <!-- Displays the form to create a new entry in a Chronicle-->
-<!-- Make this render with a button-->
-<section id="show-entries-form">
-    <h2>New Entry</h2>
-<form method="POST"
-  action="/chronicles/<%= chronicle._id %>/entries">
+<!-- Make this hid and show with a button-->
+<section id="new-entries-form">
+  <h2>New Entry</h2>
+  <form method="POST" action="/chronicles/<%= chronicle._id %>/entries">
 
-  <label>My Mood:</label>
-  <select name="mood">
-    <option value="Happy">Happy</option>
-    <option value="Sad">Sad</option>
-    <option value="Excited">Excited</option>
-    <option value="Content">Content</option>
-    <option value="Angry">Angry</option>
-    <option value="Nervous">Nervous</option>
-    <option value="Calm">Calm</option>
-    <option value="Overwhelmed">Overwhelmed</option>
-    <option value="Other">Other</option>
-  </select>
-  <br>
-  <label>Water Intake:</label>
-  <select name="water">
-    <option value="0-1">0-1 8oz glasses</option>
-    <option value="2-3">2-3 8oz glasses</option>
-    <option value="4-5">4-5 8oz glasses</option>
-    <option value="6-7">6-7 8oz glasses</option>
-    <option value="8+">8+ 8oz glasses</option>
-  </select>
-  <br>
-  <label>Daily Exercise:</label>
-  <select name="exercise">
-    <option value="none">None</option>
-    <option value="30">30 Min</option>
-    <option value="60">60 Min</option>
-    <option value="90">90 Min</option>
-    <option value="120+">120+ Min</option>
-  </select>
-  <br>
-  <label>Hours of Sleep:</label>
-  <select name="sleep">
-    <option value="0-3">0-3 Hours</option>
-    <option value="3-6">3-6 Hours</option>
-    <option value="6-8">6-8 Hours</option>
-    <option value="8+">8+ Hours</option>
-  </select>
-  <br>
-  <label>Anxiety Level:</label>
-  <select name="anxiety">
-    <option value="5">5 - Extremely Anxious</option>
-    <option value="4">4 - Very Anxious</option>
-    <option value="3">3 - Anxious</option>
-    <option value="2">2 - Very Little Anxious</option>
-    <option value="1">1 - No Anxiety</option>
-  </select>
-  <br><br> 
-  <label>Daily Writing Prompt:</label>
-  <p><%= randomPrompt %></p>
-  <textarea name="journal" id="text-box"></textarea>
-  <br>
-  <input type="submit" value="Add Entry">
+    <label>My Mood:</label>
+    <select name="mood" class="drop-box">
+      <option value="Happy">Happy</option>
+      <option value="Sad">Sad</option>
+      <option value="Excited">Excited</option>
+      <option value="Content">Content</option>
+      <option value="Angry">Angry</option>
+      <option value="Nervous">Nervous</option>
+      <option value="Calm">Calm</option>
+      <option value="Overwhelmed">Overwhelmed</option>
+      <option value="Other">Other</option>
+    </select>
+    <br>
+
+    <label>Water Intake:</label>
+    <select name="water" class="drop-box">
+      <option value="0-1">0-1 8oz glasses</option>
+      <option value="2-3">2-3 8oz glasses</option>
+      <option value="4-5">4-5 8oz glasses</option>
+      <option value="6-7">6-7 8oz glasses</option>
+      <option value="8+">8+ 8oz glasses</option>
+    </select>
+    <br>
+
+    <label>Daily Exercise:</label>
+    <select name="exercise" class="drop-box">
+      <option value="none">None</option>
+      <option value="30">30 Min</option>
+      <option value="60">60 Min</option>
+      <option value="90">90 Min</option>
+      <option value="120+">120+ Min</option>
+    </select>
+    <br>
+
+    <label>Hours of Sleep:</label>
+    <select name="sleep" class="drop-box">
+      <option value="0-3">0-3 Hours</option>
+      <option value="3-6">3-6 Hours</option>
+      <option value="6-8">6-8 Hours</option>
+      <option value="8+">8+ Hours</option>
+    </select>
+    <br>
+
+    <label>Anxiety Level:</label>
+    <select name="anxiety" class="drop-box">
+      <option value="5">5 - Extremely Anxious</option>
+      <option value="4">4 - Very Anxious</option>
+      <option value="3">3 - Anxious</option>
+      <option value="2">2 - Very Little Anxious</option>
+      <option value="1">1 - No Anxiety</option>
+    </select>
+    <br><br>
+
+    <label>Daily Writing Prompt:</label>
+    <p><%= randomPrompt %></p>
+    <textarea name="journal" id="text-box"></textarea>
+    <br><br>
+    <input type="submit" value="Add Entry">
   </form>
-  </section>
-</div>
+</section>
 <%- include('../partials/footer') %>

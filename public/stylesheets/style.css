@@ -117,10 +117,6 @@ h2 {
   color: #8552F2;
 }
 
-#create-chronicle {
-  font-size: 3vmin;
-}
-
 #show-page-header {
   display: flex;
   flex-direction: column;
@@ -142,26 +138,58 @@ h2 {
   justify-content: space-between;
 }
 
+#entry-table {
+  margin: auto;
+}
+
 #entry-table table {
   background-color: #8552F2;
   border-radius: 10px;
   text-align: center;
 }
 
+#entry-table td {
+  font-size: 2.5vmin;
+}
+
 #entry-table th {
   font-family: 'Noto Serif', serif;
 }
 
-#show-entries-form {
-  margin: 5vmin;
-  background-color: #D971B4;
+#new-entries-form {
+  margin: auto;
+  background-color: #9D62D9;
   border-radius: 10px;
-  padding: 0 3vmin 3vmin 3vmin;
-  font-size: 2vmin;
+  padding: 3vmin;
+  font-size: 2.5vmin;
+  max-width: 70vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-#show-entries-form h2 {
+#new-entries-form h2 {
   font-family: 'Caprasimo', cursive;
+}
+
+#new-entries-form input[type="submit"] {
+  font-family: 'Caprasimo', cursive;
+  background-color: #D971B4;
+  border-radius: 10px;
+  padding: 5px 20px;
+  color: #F4CF88;
+  font-size: 2.5vmin;
+  border: none;
+}
+
+#text-box {
+  font-family: 'Noto Serif', serif;
+  border-radius: 10px;
+  padding: 5px 20px;
+  color: #8552F2;
+  font-size: 2.5vmin;
+  border: none;
 }
 
 #show-content {
@@ -184,11 +212,21 @@ h2 {
 #create-chronicle {
   background-color: #8552F2;
   border-radius: 10px;
+  font-size: 3vmin;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 5vmin;
+  max-width: 70vmin;
+  margin: 5vmin auto;
+  padding: 5vmin;
+}
+
+#create-chronicle form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #create-chronicle input[type="submit"] {
@@ -219,10 +257,24 @@ h2 {
   border: none;
 }
 
+#show-content #entry-table table button {
+  background-color: #D971B4;
+}
+
+.drop-box {
+  border-radius: 10px;
+  color: #8552F2;
+  font-family: 'Noto Serif', serif;
+}
+
 button:hover {
   background-color: #D93425;
 }
 
 a:hover {
   color: #D93425;  
+}
+
+#create-chronicle input[type="submit"]:hover {
+  background-color: #D93425;  
 }
