@@ -58,72 +58,90 @@
       <h5>No Entries Yet</h5>
     <% } %>
   </section>
-</div>
 
 <!-- Displays the form to create a new entry in a Chronicle-->
-<!-- Make this hid and show with a button-->
-<section id="new-entries-form">
-  <h2>New Entry</h2>
-  <form method="POST" action="/chronicles/<%= chronicle._id %>/entries">
+<br>
+<button id="toggleButton">New Entry</button>
+<br>
+<section id="hidden-form">
+  <section id="new-entries-form">
+    <h2>New Entry</h2>
+    <form method="POST" action="/chronicles/<%= chronicle._id %>/entries">
 
-    <label>My Mood:</label>
-    <select name="mood" class="drop-box">
-      <option value="Happy">Happy</option>
-      <option value="Sad">Sad</option>
-      <option value="Excited">Excited</option>
-      <option value="Content">Content</option>
-      <option value="Angry">Angry</option>
-      <option value="Nervous">Nervous</option>
-      <option value="Calm">Calm</option>
-      <option value="Overwhelmed">Overwhelmed</option>
-      <option value="Other">Other</option>
-    </select>
-    <br>
+      <label>My Mood:</label>
+      <select name="mood" class="drop-box">
+        <option value="Happy">Happy</option>
+        <option value="Sad">Sad</option>
+        <option value="Excited">Excited</option>
+        <option value="Content">Content</option>
+        <option value="Angry">Angry</option>
+        <option value="Nervous">Nervous</option>
+        <option value="Calm">Calm</option>
+        <option value="Overwhelmed">Overwhelmed</option>
+        <option value="Other">Other</option>
+      </select>
+      <br>
 
-    <label>Water Intake:</label>
-    <select name="water" class="drop-box">
-      <option value="0-1">0-1 8oz glasses</option>
-      <option value="2-3">2-3 8oz glasses</option>
-      <option value="4-5">4-5 8oz glasses</option>
-      <option value="6-7">6-7 8oz glasses</option>
-      <option value="8+">8+ 8oz glasses</option>
-    </select>
-    <br>
+      <label>Water Intake:</label>
+      <select name="water" class="drop-box">
+        <option value="0-1">0-1 8oz glasses</option>
+        <option value="2-3">2-3 8oz glasses</option>
+        <option value="4-5">4-5 8oz glasses</option>
+        <option value="6-7">6-7 8oz glasses</option>
+        <option value="8+">8+ 8oz glasses</option>
+      </select>
+      <br>
 
-    <label>Daily Exercise:</label>
-    <select name="exercise" class="drop-box">
-      <option value="none">None</option>
-      <option value="30">30 Min</option>
-      <option value="60">60 Min</option>
-      <option value="90">90 Min</option>
-      <option value="120+">120+ Min</option>
-    </select>
-    <br>
+      <label>Daily Exercise:</label>
+      <select name="exercise" class="drop-box">
+        <option value="none">None</option>
+        <option value="30">30 Min</option>
+        <option value="60">60 Min</option>
+        <option value="90">90 Min</option>
+        <option value="120+">120+ Min</option>
+      </select>
+      <br>
 
-    <label>Hours of Sleep:</label>
-    <select name="sleep" class="drop-box">
-      <option value="0-3">0-3 Hours</option>
-      <option value="3-6">3-6 Hours</option>
-      <option value="6-8">6-8 Hours</option>
-      <option value="8+">8+ Hours</option>
-    </select>
-    <br>
+      <label>Hours of Sleep:</label>
+      <select name="sleep" class="drop-box">
+        <option value="0-3">0-3 Hours</option>
+        <option value="3-6">3-6 Hours</option>
+        <option value="6-8">6-8 Hours</option>
+        <option value="8+">8+ Hours</option>
+      </select>
+      <br>
 
-    <label>Anxiety Level:</label>
-    <select name="anxiety" class="drop-box">
-      <option value="5">5 - Extremely Anxious</option>
-      <option value="4">4 - Very Anxious</option>
-      <option value="3">3 - Anxious</option>
-      <option value="2">2 - Very Little Anxious</option>
-      <option value="1">1 - No Anxiety</option>
-    </select>
-    <br><br>
+      <label>Anxiety Level:</label>
+      <select name="anxiety" class="drop-box">
+        <option value="5">5 - Extremely Anxious</option>
+        <option value="4">4 - Very Anxious</option>
+        <option value="3">3 - Anxious</option>
+        <option value="2">2 - Very Little Anxious</option>
+        <option value="1">1 - No Anxiety</option>
+      </select>
+      <br><br>
 
-    <label>Daily Writing Prompt:</label>
-    <p><%= randomPrompt %></p>
-    <textarea name="journal" id="text-box"></textarea>
-    <br><br>
-    <input type="submit" value="Add Entry">
-  </form>
+      <label>Daily Writing Prompt:</label>
+      <p><%= randomPrompt %></p>
+      <textarea name="journal" id="text-box"></textarea>
+      <br><br>
+      <input type="submit" value="Add Entry">
+    </form>
+  </section>
 </section>
+<br>
+</div>
+
+<script>
+  const toggleButton = document.getElementById('toggleButton');
+  const hiddenSection = document.getElementById('hidden-form');
+
+  toggleButton.addEventListener('click', () => {
+    if (hiddenSection.style.display === 'none'|| hiddenSection.style.display === '') {
+      hiddenSection.style.display = 'block';
+    } else {
+      hiddenSection.style.display = 'none';
+    }
+  });
+</script>
 <%- include('../partials/footer') %>
