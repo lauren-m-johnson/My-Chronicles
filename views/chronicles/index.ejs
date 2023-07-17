@@ -1,7 +1,9 @@
-<!-- DISPLAYS ALL CHRONICLES-->
+<!-- Displays the Chronicle Library-->
+
 <%- include('../partials/header') %>
 <div id="chronicle-display">
   <h2><%= user.name %>'s Chronicles</h2>
+
   <table>
     <thead>
       <tr>
@@ -28,6 +30,7 @@
       <% }) %>
     </tbody>
   </table>
+  
   <br>
   <a id="create-chronicle" href="/chronicles/new">Create a Chronicle</a>
 </div>
