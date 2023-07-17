@@ -1,11 +1,11 @@
 # 💫 My Chronicles 💫
 
 ## 📖 Table of Contents
-- [Description](#📔-description)
-- [Technologies Used](#👩🏽‍💻-technologies-used)
-- [Code Preview](#🔍-code-preview)
-- [Links](#🔗-links)
-- [Ice Box Features](#🧊-next-steps-and-icebox-items)
+- [Description](#-description)
+- [Technologies Used](#-technologies-used)
+- [Code Preview](#-code-preview)
+- [Links](#-links)
+- [Ice Box Features](#-next-steps-and-icebox-items)
 
 ## 📔 Desription:
 Discover My Chronicles, a transformative journaling web app designed to help you unlock your inner thoughts, boost self-awareness, and cultivate a more mindful and fulfilling life. Capture your thoughts, reflect, and explore your emotions in a clean and intuitive interface. My Chronicles empowers you to prioritize your well-being and unlock your inner potential.
