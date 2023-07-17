@@ -16,6 +16,10 @@ Discover My Chronicles, a transformative journaling web app designed to help you
 - Calm aesthetic and intuitive display.
 
 ### Preview:
+![Screenshot of Landing Page](images/landingpage.png)
+![Screenshot of Home Page](images/homepage.png)
+![Screenshot of Chronicle Library](images/library.png)
+![Screenshot of Chronicle Entry Page](images/entries.png)
 
 ## 👩🏽‍💻 Technologies Used:
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
