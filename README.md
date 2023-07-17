@@ -17,9 +17,13 @@ Discover My Chronicles, a transformative journaling web app designed to help you
 - Calm aesthetic and intuitive display.
 
 ### Preview:
+Landing Page:
 ![Screenshot of Landing Page](public/images/landingpage.png)
+Home Page:
 ![Screenshot of Home Page](public/images/homepage.png)
+Chronicle Library:
 ![Screenshot of Chronicle Library](public/images/library.png)
+Chronicle Entry:
 ![Screenshot of Chronicle Entry Page](public/images/entries.png)
 
 ## 👩🏽‍💻 Technologies Used:

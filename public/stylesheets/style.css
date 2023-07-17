@@ -265,6 +265,33 @@ h2 {
   background-color: #D971B4;
 }
 
+#edit-entries-form {
+  margin: 5vmin auto;
+  background-color: #9D62D9;
+  border-radius: 10px;
+  padding: 3vmin;
+  font-size: 2vmin;
+  max-width: 70vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#edit-entries-form h2 {
+  font-family: 'Caprasimo', cursive;
+}
+
+#edit-entries-form input[type="submit"] {
+  font-family: 'Caprasimo', cursive;
+  background-color: #D971B4;
+  border-radius: 10px;
+  padding: 5px 20px;
+  color: #F4CF88;
+  font-size: 2.5vmin;
+  border: none;
+}
+
 .drop-box {
   border-radius: 10px;
   color: #8552F2;
@@ -280,5 +307,9 @@ a:hover {
 }
 
 #create-chronicle input[type="submit"]:hover {
+  background-color: #D93425;  
+}
+
+#edit-entries-form input[type="submit"]:hover {
   background-color: #D93425;  
 }
