@@ -4,6 +4,7 @@
 - [Description](#-description)
 - [Technologies Used](#-technologies-used)
 - [Code Preview](#-code-preview)
+- [Getting Started](#-getting-started)
 - [Links](#-links)
 - [Ice Box Features](#-next-steps-and-icebox-items)
 
@@ -16,10 +17,10 @@ Discover My Chronicles, a transformative journaling web app designed to help you
 - Calm aesthetic and intuitive display.
 
 ### Preview:
-![Screenshot of Landing Page](images/landingpage.png)
-![Screenshot of Home Page](images/homepage.png)
+![Screenshot of Landing Page](public/images/landingpage.png)
+![Screenshot of Home Page](public/images/homepage.png)
 ![Screenshot of Chronicle Library](public/images/library.png)
-![Screenshot of Chronicle Entry Page](images/entries.png)
+![Screenshot of Chronicle Entry Page](public/images/entries.png)
 
 ## 👩🏽‍💻 Technologies Used:
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
@@ -188,10 +189,12 @@ Discover My Chronicles, a transformative journaling web app designed to help you
 <%- include('../partials/footer') %>
 ```
 
-## 🔗 Links
-
+## 💫 Getting Started:
 - [Link to My Chronicles](https://my-chronicles-60a6d00a70e1.herokuapp.com/)
 Note: "My Chronicles" is currently having issues with Google Chrome. If problems persist, try a different browser.
+
+## 🔗 Links
+
 - [Link to Wire Frame](https://whimsical.com/project-2-wireframe-KioBaVzb6Qc1whHUmDJUzq)
 - [Link to ERD](https://lucid.app/lucidchart/94662975-752b-4124-aae3-b044ad34c4d5/edit?beaconFlowId=0EB7DF3AE3A3057C&invitationId=inv_d9481bd1-2214-4058-a399-460e88ec7d48&page=0_0#)
 - [Link to Inspirational Quote API](https://forum.freecodecamp.org/t/free-api-inspirational-quotes-json-with-code-examples/311373)
