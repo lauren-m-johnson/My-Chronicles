@@ -1,7 +1,7 @@
 # 💫 My Chronicles 💫
 
 ## 📖 Table of Contents
-- [Description](#📔-desription)
+- [Description](#📔-description)
 - [Technologies Used](#👩🏽‍💻-technologies-used)
 - [Code Preview](#🔍-code-preview)
 - [Links](#🔗-links)
@@ -32,6 +32,7 @@ Discover My Chronicles, a transformative journaling web app designed to help you
 
 ## 🔍 Code Preview
 
+```ejs
 <!-- This page shows the Chronicle after being created and all of that Chronicle's Entries-->
 
 <%- include('../partials/header') %>
@@ -181,6 +182,7 @@ Discover My Chronicles, a transformative journaling web app designed to help you
 </script>
 
 <%- include('../partials/footer') %>
+```
 
 ## 🔗 Links
 
