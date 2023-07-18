@@ -9,10 +9,11 @@
 - [Ice Box Features](#-next-steps-and-icebox-items)
 
 ## 📔 Desription:
-Discover My Chronicles, a transformative journaling web app designed to help you unlock your inner thoughts, boost self-awareness, and cultivate a more mindful and fulfilling life. Capture your thoughts, reflect, and explore your emotions in a clean and intuitive interface. My Chronicles empowers you to prioritize your well-being and unlock your inner potential.
+Discover My Chronicles, a transformative journaling web app designed to help you unlock your inner thoughts, boost self-awareness, and cultivate a more mindful and fulfilling life in just 5-10 minutes a day. Capture your thoughts, reflect, and explore your emotions in a clean and intuitive interface. My Chronicles empowers you to prioritize your well-being and unlock your inner potential.
 
 ### ✨ Features:
-- Log in with Google OAuth for better security.
+- Convenient
+- Log in with Google OAuth.
 - Create and store journal entries in Chronicles for better organization.
 - Calm aesthetic and intuitive display.
 
