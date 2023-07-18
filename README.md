@@ -208,3 +208,4 @@ Note: "My Chronicles" is currently having issues with Google Chrome. If problems
 
 1. Create an edit profile feature.
 2. Add abilty for user to add their zodiac sign to recieve their daily horoscope through paid API.
+3. Allow user to customize their daily habits to what they would like to track.
